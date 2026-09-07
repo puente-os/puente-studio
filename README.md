@@ -1,34 +1,42 @@
-# Puente Studio — Dev Kit
+# Puente Studio
 
-Kit de desarrollo local para crear y gestionar aplicaciones web dentro de **Puente OS**.  
-Incluye scripts Node.js para bajar y subir artefactos.
+An example workspace for building web applications in **Puente OS**.
 
-Para documentación de agentes, revisa [`AGENTS.md`](./AGENTS.md).
+Install the official Puente OS skills from the [`puente-os/agent-skills`](https://github.com/puente-os/agent-skills) marketplace.
 
----
+We strongly recommend installing the skills before working in this workspace.
 
-## Requisitos
-
-- Node.js 14+ (sin dependencias externas)
-- Cuenta activa en [app.puente.xyz](https://app.puente.xyz)
-- Una **Platform API Key** generada desde Configuración
-
----
-
-## Setup
+## Install in Codex
 
 ```bash
-# 1. Clona el repo
-git clone <url-del-repo>
-cd puente_studio_repo
+codex plugin marketplace add puente-os/agent-skills
+codex plugin add puente-os@skills
+```
 
-# 2. Crea tu archivo de entorno
+Start a new Codex task after installation.
+
+## Install in Claude Code
+
+Run these commands inside Claude Code:
+
+```text
+/plugin marketplace add puente-os/agent-skills
+/plugin install puente-os@skills
+```
+
+Restart Claude Code after installation.
+
+## Project configuration
+
+```bash
 cp .env.example .env
 ```
 
-Edita `.env` y completa tu `STUDIO_KEY`:
+Set the required variables without committing credentials to Git:
 
 ```env
 BASE_URL=<base_url>
 STUDIO_KEY=<puente_studio_placeholder>
 ```
+
+See the [official marketplace](https://github.com/puente-os/agent-skills) for update instructions and the latest documentation.
